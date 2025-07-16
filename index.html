@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUTTO - Authentic Italian Cuisine in Wisła</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+        <nav class="fixed top-0 left-0 right-0 bg-[#121618] shadow-lg z-50 px-6 py-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div>
+                    <h1 class="playfair text-3xl font-bold gold-text uppercase">TUTTO</h1>
+                    <p class="text-sm">Pizza Pasta Salad</p>
+                </div>
+        
+                <!-- Linki nawigacyjne -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about" class="hover:text-[#c19b76] transition lang" data-pl="O nas" data-cz="O nás">O nas</a>
+                    <a href="#menu" class="hover:text-[#c19b76] transition lang" data-pl="Menu" data-cz="Menu">Menu</a>
+                    <a href="#gallery" class="hover:text-[#c19b76] transition lang" data-pl="Galeria" data-cz="Galerie">Galeria</a>
+                    <a href="#testimonials" class="hover:text-[#c19b76] transition lang" data-pl="Opinie" data-cz="Recenze">Opinie</a>
+                    <a href="#location" class="hover:text-[#c19b76] transition lang" data-pl="Znajdź nas" data-cz="Najdi nás">Znajdź nas</a>
+                </div>
+        
+                <!-- Ikony społecznościowe + język -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button id="lang-toggle" class="text-[white] md:text-1xl px-1 text-2xl rounded-full text-sm hover:text-[#c19b76] 
+                    transition duration-300">PL / CZ</button>
+                    <a href="#" class="text-white hover:text-[#c19b76] text-2xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white hover:text-[#c19b76] text-2xl"><i class="fab fa-instagram"></i></a>
+                    
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+
+        
+    <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#121618] absolute top-full left-0 right-0 py-4 px-6 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#about" class="hover:text-[#c19b76] transition lang" data-pl="O nas" data-cz="O nás">O nas</a>
+                <a href="#menu" class="hover:text-[#c19b76] transition lang" data-pl="Menu" data-cz="Menu">Menu</a>
+                <a href="#gallery" class="hover:text-[#c19b76] transition lang" data-pl="Galeria" data-cz="Galerie">Galeria</a>
+                <a href="#testimonials" class="hover:text-[#c19b76] transition lang" data-pl="Opinie" data-cz="Recenze">Opinie</a>
+                <a href="#location" class="hover:text-[#c19b76] transition lang" data-pl="Znajdź nas" data-cz="Najdi nás">Znajdź nas</a>
+                <div class="flex space-x-4">
+                    <button id="lang-toggleMobile" class="text-[white] md:text-1xl px-1 text-2xl rounded-full text-sm hover:text-[#c19b76] 
+                transition duration-300">PL / CZ</button>
+                    <a href="#" class="text-white hover:text-[#c19b76] text-2xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white hover:text-[#c19b76] text-2xl"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        </nav>
+        
+    <!-- Hero Section -->
+    <section class="hero-section relative h-screen overflow-hidden pt-20">
+        <!-- Video background -->
+        <video autoplay muted loop class="absolute w-full h-full object-cover z-0">
+            <source src="content/najciemniejsze.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Floating pasta elements -->
+        <div class="floating-pasta pasta-1">
+            <img src="https://cdn-icons-png.flaticon.com/512/1404/1404945.png" alt="Pasta" class="w-16 h-16 opacity-30">
+        </div>
+        <div class="floating-pasta pasta-2">
+            <img src="https://cdn-icons-png.flaticon.com/512/1404/1404945.png" alt="Pasta" class="w-20 h-20 opacity-30">
+        </div>
+        <div class="floating-pasta pasta-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/1404/1404945.png" alt="Pasta" class="w-12 h-12 opacity-30">
+        </div>
+
+        <div class="container mx-auto h-full flex items-center px-10 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-center w-full">
+                <!-- Content -->
+                <div class="md:full mb-10 md:mb-0 text-center md:text-center">
+                    <h1 class="playfair text-7xl md:text-8xl font-bold mb-2  uppercase">TUTTO</h1>
+                    <p class="text-xl md:text-2xl italic mb-6">Pizza Pasta Salad</p>
+                    <p class="text-xl md:text-2xl italic mb-8 lang" data-pl="Prawdziwa włoska kuchnia w sercu Beskidów" data-cz="Pravá italská kuchyně v srdci Beskyd.">
+                        Prawdziwa włoska kuchnia w sercu Beskidów
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row space-y-4  sm:space-y-0 sm:space-x-4 justify-center">
+                        <a href="#menu" class="bg-transparent border gold-border text-white px-8 py-3 rounded-full hover:bg-[#c19b76] hover:border-[#c19b76] hover:text-[#121618] transition duration-300">
+                            <i class="fas fa-utensils mr-2"></i> Zobacz Menu
+                        </a>
+                        <a href="https://www.pyszne.pl/menu/tutto-pizza-pasta" target="_blank" class="bg-[#c19b76] border border-[#c19b76] text-[#121618] px-8 py-3 rounded-full hover:bg-transparent hover:text-white transition duration-300">
+                            <i class="fas fa-mobile-alt mr-2"></i> Zamów Online
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+            <a href="#about" class="text-white animate-bounce">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 px-10 bg-[#1a1e22]">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-4xl md:text-5xl font-bold mb-4 gold-text">O nas</h2>
+                <div class="divider w-24 h-px mx-auto my-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">Zlokalizowana w tętniącym życiem centrum Wisły, Tutto przenosi autentyczne smaki Włoch do Polski. Nasi kucharze tworzą każde danie z pasją, korzystając z tradycyjnych receptur i najlepszych składników.</p>
+            </div>
+           
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <a href="#pizza" class="transition">
+                <div class="bg-[#1a1e22] p-8 rounded-lg text-center menu-item">
+                    <i class="fas fa-pizza-slice gold-text text-5xl mb-6"></i>
+                    <h3 class="playfair text-2xl font-bold mb-4">Pizza</h3>
+                    <p>Nasza pizza to klasyka włoskiego smaku – cienkie, chrupiące ciasto, świeże składniki i wypiek w wysokiej temperaturze. Każda porcja to małe dzieło sztuki kulinarnej.</p>
+                </div>
+                </a>
+                <a href="#pasta" class="transition">
+                <div class="bg-[#1a1e22] p-8 rounded-lg text-center menu-item">
+                    <i class="fa-solid fa-bowl-food gold-text text-5xl mb-6"></i>
+                    <h3 class="playfair text-2xl font-bold mb-4">Makaron</h3>
+                    <p>Ręcznie wyrabiany makaron to serce naszej kuchni. Tworzony na miejscu, według sprawdzonych receptur – delikatny, sprężysty i idealnie chłonący sos.</p>
+                </div>
+                </a>
+                <div class="bg-[#1a1e22] p-8 rounded-lg text-center menu-item">
+                    <i class="fas fa-hamburger gold-text text-5xl mb-6"></i>
+                    <h3 class="playfair text-2xl font-bold mb-4">Burger</h3>
+                    <p>Nasze burgery wyróżniają się domowymi bułkami pieczonymi na miejscu. Dodajemy do nich soczyste mięso, świeże dodatki i oryginalne sosy – wszystko od podstaw.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Menu Section -->
+        <section id="menu"  class="py-20 px-10">
+        <section id="pizza"></section>
+            <div class="container mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="playfair text-4xl md:text-5xl font-bold mb-4 gold-text">Nasze Menu</h2>
+                    <div class="divider w-24 h-px mx-auto my-6"></div>
+                    <p class="max-w-3xl mx-auto text-lg">Odkryj autentyczny smak Włoch dzięki naszej starannie wyselekcjonowanej ofercie dań.</p>
+                </div>
+        
+        <!-- Pizza Section -->
+        <div class="mb-20 max-w-5xl mx-auto px-4">
+            <div class="flex justify-center items-center mb-10">
+                <i class="fas fa-pizza-slice gold-text text-3xl mr-4"></i>
+                <h3 class="playfair text-3xl font-bold gold-text">Pizza</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pizza Item 1 -->
+                <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                    <img src="/content/Margharita_Bufala.jpg" 
+                        alt="Margherita Pizza" 
+                        class="w-20 h-20 md:w-24 md:h-24 object-cover aspect-square rounded-full border-2 border-[#c19b76]">
+                    <div class="ml-6">
+                        <h4 class="playfair text-xl font-bold mb-2">Margherita Bufala</h4>
+                        <p class="text-sm mb-3">Opis1</p>
+                        <p class="gold-text font-bold">42 zł</p>
+                    </div>
+                </div>
+                
+                <!-- Pizza Item 2 -->
+                <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                    <img src="/content/Pere_e_pepe.jpg" 
+                        alt="Pere e pepe" 
+                        class="w-20 h-20 md:w-24 md:h-24 object-cover aspect-square rounded-full border-2 border-[#c19b76]">
+                    <div class="ml-6">
+                        <h4 class="playfair text-xl font-bold mb-2">Pere e pepe</h4>
+                        <p class="text-sm mb-3">Opis2</p>
+                        <p class="gold-text font-bold">48 zł</p>
+                    </div>
+                </div>
+                
+                <!-- Pizza Item 3 -->
+                <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                    <img src="/content/Tonno.jpg" 
+                        alt="Tonno" 
+                        class="w-20 h-20 md:w-24 md:h-24 object-cover aspect-square rounded-full border-2 border-[#c19b76]">
+                    <div class="ml-6">
+                        <h4 class="playfair text-xl font-bold mb-2">Tonno</h4>
+                        <p class="text-sm mb-3">Opis3</p>
+                        <p class="gold-text font-bold">46 zł</p>
+                    </div>
+                </div>
+                
+                <!-- Pizza Item 4 -->
+                <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                    <img src="/content/Foccacia.jpg" 
+                        alt="Foccacia" 
+                        class="w-20 h-20 md:w-24 md:h-24 object-cover aspect-square rounded-full border-2 border-[#c19b76]">
+                    <div class="ml-6">
+                        <h4 class="playfair text-xl font-bold mb-2">Foccacia</h4>
+                        <p class="text-sm mb-3">Foccacia</p>
+                        <p class="gold-text font-bold">55 zł</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="bg-transparent border gold-border text-white px-8 py-3 rounded-full hover:bg-[#c19b76] hover:border-[#c19b76] hover:text-[#121618] transition duration-300">
+                    Zobacz Całe Menu
+                </a>
+            </div>
+        </div>
+
+        <section id="pasta"></section>
+                <!-- Pasta Section -->
+                <div class="mb-20 max-w-5xl mx-auto px-4">
+                    <div class="flex items-center mb-10 justify-center">
+                        <i class="fa-solid fa-bowl-food gold-text text-3xl mr-4"></i>
+                        <h3 class="playfair text-3xl font-bold gold-text">Makaron</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Pasta Item 1 -->
+                        <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                            <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Spaghetti Carbonara" 
+                                 class="w-24 h-24 object-cover rounded-full border-2 border-[#c19b76]">
+                            <div class="ml-6">
+                                <h4 class="playfair text-xl font-bold mb-2">Spaghetti Carbonara</h4>
+                                <p class="text-sm mb-3">Carbonara</p>
+                                <p class="gold-text font-bold">45 zł</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Pasta Item 2 -->
+                        <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                            <img src="https://images.unsplash.com/photo-1611270629569-8b357cb88da9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                 alt="Pappardelle al Ragu" 
+                                 class="w-24 h-24 object-cover rounded-full border-2 border-[#c19b76]">
+                            <div class="ml-6">
+                                <h4 class="playfair text-xl font-bold mb-2">Pappardelle</h4>
+                                <p class="text-sm mb-3">Test1</p>
+                                <p class="gold-text font-bold">50 zł</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Pasta Item 3 -->
+                        <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                            <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Tortellini" 
+                                 class="w-24 h-24 object-cover rounded-full border-2 border-[#c19b76]">
+                            <div class="ml-6">
+                                <h4 class="playfair text-xl font-bold mb-2">Tortelini</h4>
+                                <p class="text-sm mb-3"></p>
+                                <p class="gold-text font-bold">48 zł</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Pasta Item 4 -->
+                        <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                            <img src="https://images.unsplash.com/photo-1612528443702-f6741f70a049?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" 
+                                 alt="Gnocchi" 
+                                 class="w-24 h-24 object-cover rounded-full border-2 border-[#c19b76]">
+                            <div class="ml-6">
+                                <h4 class="playfair text-xl font-bold mb-2">Gnocchi</h4>
+                                <p class="text-sm mb-3">Gnocchi</p>
+                                <p class="gold-text font-bold">47 zł</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-10">
+                        <a href="#" class="bg-transparent border gold-border text-white px-8 py-3 rounded-full 
+                        hover:bg-[#c19b76] hover:border-[#c19b76] hover:text-[#121618] transition duration-300">Zobacz Całe Menu</a>
+                    </div>
+                </div>
+               <!-- Burgers Section -->
+                <div class="mb-20 max-w-5xl mx-auto px-4">
+                    <div class="flex items-center mb-10 justify-center">
+                        <i class="fas fa-hamburger gold-text text-3xl mr-4"></i>
+                        <h3 class="playfair text-3xl font-bold gold-text">Burger</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Burger Item 1 -->
+                        <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=999&q=80" 
+                                 alt="Classico" 
+                                 class="w-24 h-24 object-cover rounded-full border-2 border-[#c19b76]">
+                            <div class="ml-6">
+                                <h4 class="playfair text-xl font-bold mb-2">Classico</h4>
+                                <p class="text-sm mb-3">Angus beef, pancetta, taleggio, arugula, truffle mayo</p>
+                                <p class="gold-text font-bold">52 zł</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Burger Item 2 -->
+                        <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                            <img src="https://images.unsplash.com/photo-1559849484-e058ca84798a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                                 alt="Pollo" 
+                                 class="w-24 h-24 object-cover rounded-full border-2 border-[#c19b76]">
+                            <div class="ml-6">
+                                <h4 class="playfair text-xl font-bold mb-2">Pollo</h4>
+                                <p class="text-sm mb-3">Grilled chicken, pesto, sundried tomatoes, mozzarella</p>
+                                <p class="gold-text font-bold">48 zł</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Burger Item 3 -->
+                        <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                            <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=722&q=80" 
+                                 alt="Vegetariano" 
+                                 class="w-24 h-24 object-cover rounded-full border-2 border-[#c19b76]">
+                            <div class="ml-6">
+                                <h4 class="playfair text-xl font-bold mb-2">Vegetariano</h4>
+                                <p class="text-sm mb-3">Portobello mushroom, grilled zucchini, eggplant, pesto</p>
+                                <p class="gold-text font-bold">45 zł</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Burger Item 4 -->
+                        <div class="flex bg-[#1a1e22] p-6 rounded-lg menu-item">
+                            <img src="https://images.unsplash.com/photo-1571091718761-753244dfb849?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" 
+                                 alt="Piccante" 
+                                 class="w-24 h-24 object-cover rounded-full border-2 border-[#c19b76]">
+                            <div class="ml-6">
+                                <h4 class="playfair text-xl font-bold mb-2">Piccante</h4>
+                                <p class="text-sm mb-3">Spicy nduja sausage, provolone, roasted peppers</p>
+                                <p class="gold-text font-bold">54 zł</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-10">
+                        <a href="#" class="bg-transparent border gold-border text-white px-8 py-3 rounded-full hover:bg-[#c19b76] hover:border-[#c19b76] hover:text-[#121618] transition duration-300">View Full Burger Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 px-10 bg-[#1a1e22]">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-4xl md:text-5xl font-bold mb-4 gold-text">Our Gallery</h2>
+                <div class="divider w-24 h-px mx-auto my-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">A visual journey through our culinary creations and inviting atmosphere</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1559849649-3eeb7a8e1d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Restaurant Interior" 
+                         class="w-full h-64 object-cover">
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Pizza Preparation" 
+                         class="w-full h-64 object-cover">
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Pasta Dish" 
+                         class="w-full h-64 object-cover">
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1559849484-e058ca84798a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" 
+                         alt="Italian Burger" 
+                         class="w-full h-64 object-cover">
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Chef Cooking" 
+                         class="w-full h-64 object-cover">
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Dining Area" 
+                         class="w-full h-64 object-cover">
+                </div>
+                
+                <!-- Gallery Item 7 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                         alt="Wine Selection" 
+                         class="w-full h-64 object-cover">
+                </div>
+                
+                <!-- Gallery Item 8 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                         alt="Dessert" 
+                         class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-10">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-4xl md:text-5xl font-bold mb-4 gold-text">What Our Guests Say</h2>
+                <div class="divider w-24 h-px mx-auto my-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">Hear from our satisfied customers about their Tutto experience</p>
+            </div>
+            
+            <div class="testimonial-slider relative">
+                <!-- Left Arrow -->
+                <div class="testimonial-arrow left" id="testimonial-prev">
+                    <i class="fas fa-chevron-left text-white"></i>
+                </div>
+                
+                <!-- Right Arrow -->
+                <div class="testimonial-arrow right" id="testimonial-next">
+                    <i class="fas fa-chevron-right text-white"></i>
+                </div>
+                
+                <!-- Testimonial Slides -->
+                <div class="grid grid-row-1 md:grid-cols-3 gap-8">
+                    <!-- Slide 1 (Active) -->
+                    <div class="testimonial-slide active">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card p-8 rounded-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" 
+                                     alt="Anna K." 
+                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
+                                <div class="ml-4">
+                                    <h4 class="playfair text-xl font-bold">Anna K.</h4>
+                                    <div class="flex gold-text">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic mb-4">"The best Italian food I've had outside of Italy! The carbonara is absolutely divine and takes me right back to Rome."</p>
+                            <p class="text-sm text-gray-400">Visited: March 2023</p>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card p-8 rounded-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" 
+                                     alt="Piotr W." 
+                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
+                                <div class="ml-4">
+                                    <h4 class="playfair text-xl font-bold">Piotr W.</h4>
+                                    <div class="flex gold-text">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic mb-4">"The Diavola pizza is perfectly spicy and the crust has that authentic wood-fired taste. Service was impeccable too!"</p>
+                            <p class="text-sm text-gray-400">Visited: January 2023</p>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card p-8 rounded-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" 
+                                     alt="Magdalena S." 
+                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
+                                <div class="ml-4">
+                                    <h4 class="playfair text-xl font-bold">Magdalena S.</h4>
+                                    <div class="flex gold-text">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic mb-4">"We come here every anniversary. The romantic atmosphere combined with exquisite food makes for perfect celebrations."</p>
+                            <p class="text-sm text-gray-400">Visited: December 2022</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <!-- Testimonial 4 -->
+                        <div class="testimonial-card p-8 rounded-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" 
+                                     alt="Jan K." 
+                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
+                                <div class="ml-4">
+                                    <h4 class="playfair text-xl font-bold">Jan K.</h4>
+                                    <div class="flex gold-text">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic mb-4">"The Italian burgers are a revelation! The combination of flavors is incredible. I can't decide which one I like more."</p>
+                            <p class="text-sm text-gray-400">Visited: November 2022</p>
+                        </div>
+                        
+                        <!-- Testimonial 5 -->
+                        <div class="testimonial-card p-8 rounded-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/women/45.jpg" 
+                                     alt="Katarzyna M." 
+                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
+                                <div class="ml-4">
+                                    <h4 class="playfair text-xl font-bold">Katarzyna M.</h4>
+                                    <div class="flex gold-text">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic mb-4">"As someone who lived in Italy for 5 years, I can say this is the most authentic Italian food in Poland. The pasta is perfect!"</p>
+                            <p class="text-sm text-gray-400">Visited: October 2022</p>
+                        </div>
+                        
+                        <!-- Testimonial 6 -->
+                        <div class="testimonial-card p-8 rounded-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/men/68.jpg" 
+                                     alt="Marek Z." 
+                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
+                                <div class="ml-4">
+                                    <h4 class="playfair text-xl font-bold">Marek Z.</h4>
+                                    <div class="flex gold-text">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic mb-4">"The wine selection is excellent and pairs perfectly with the food. The staff's recommendations are always spot on."</p>
+                            <p class="text-sm text-gray-400">Visited: September 2022</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <!-- Testimonial 7 -->
+                        <div class="testimonial-card p-8 rounded-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/women/22.jpg" 
+                                     alt="Agnieszka P." 
+                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
+                                <div class="ml-4">
+                                    <h4 class="playfair text-xl font-bold">Agnieszka P.</h4>
+                                    <div class="flex gold-text">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic mb-4">"The atmosphere is so cozy and authentic. It feels like a little piece of Italy right in the center of Wisła."</p>
+                            <p class="text-sm text-gray-400">Visited: August 2022</p>
+                        </div>
+                        
+                        <!-- Testimonial 8 -->
+                        <div class="testimonial-card p-8 rounded-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" 
+                                     alt="Tomasz B." 
+                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
+                                <div class="ml-4">
+                                    <h4 class="playfair text-xl font-bold">Tomasz B.</h4>
+                                    <div class="flex gold-text">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic mb-4">"I've tried almost everything on the menu and haven't been disappointed once. The quality is consistently excellent."</p>
+                            <p class="text-sm text-gray-400">Visited: July 2022</p>
+                        </div>
+                        
+                        <!-- Testimonial 9 -->
+                        <div class="testimonial-card p-8 rounded-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="https://randomuser.me/api/portraits/women/55.jpg" 
+                                     alt="Ewa W." 
+                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
+                                <div class="ml-4">
+                                    <h4 class="playfair text-xl font-bold">Ewa W.</h4>
+                                    <div class="flex gold-text">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="italic mb-4">"The desserts are to die for! The tiramisu is the best I've ever had - light, creamy, and full of flavor."</p>
+                            <p class="text-sm text-gray-400">Visited: June 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Location Section -->
+    <section id="location" class="py-20 px-10 bg-[#1a1e22]">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="playfair text-4xl md:text-5xl font-bold mb-4 gold-text">Find Us</h2>
+                <div class="divider w-24 h-px mx-auto my-6"></div>
+                <p class="max-w-3xl mx-auto text-lg">Visit our restaurant in the heart of Wisła's City Center</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Map -->
+                <div class="map-container rounded-lg overflow-hidden shadow-xl h-96">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2568.123456789012!2d18.12345678901234!3d49.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDA3JzI0LjQiTiAxOMKwMDcnMjQuNCJF!5e0!3m2!1sen!2spl!4v1234567890123!5m2!1sen!2spl" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="flex flex-col justify-center">
+                    <div class="mb-8">
+                        <h3 class="playfair text-2xl font-bold mb-4 gold-text">Address</h3>
+                        <p class="mb-2">Rynek 15</p>
+                        <p>43-460 Wisła, Poland</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h3 class="playfair text-2xl font-bold mb-4 gold-text">Contact</h3>
+                        <p class="mb-2">Phone: +48 123 456 789</p>
+                        <p>Email: info@tutto-wisla.pl</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="playfair text-2xl font-bold mb-4 gold-text">Hours</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <p class="font-semibold">Monday - Thursday</p>
+                                <p>11:00 - 22:00</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Friday - Saturday</p>
+                                <p>11:00 - 23:00</p>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Sunday</p>
+                                <p>12:00 - 21:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="playfair text-2xl font-bold mb-4 gold-text">Parking</h3>
+                        <p>Paid parking available at City Center underground garage (entrance on Słoneczna street)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 px-10 bg-[#0e1113]">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div>
+                    <h3 class="playfair text-2xl font-bold mb-6 gold-text uppercase">TUTTO</h3>
+                    <p class="mb-4">Pizza Pasta Salad</p>
+                    <p class="mb-4">Bringing authentic Italian flavors to the heart of Wisła since 2015.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:gold-text text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white hover:gold-text text-xl"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="playfair text-2xl font-bold mb-6 gold-text">Contact</h3>
+                    <p class="mb-2">Rynek 15, 43-460 Wisła</p>
+                    <p class="mb-2">+48 123 456 789</p>
+                    <p>info@tutto-wisla.pl</p>
+                </div>
+                
+                <div>
+                    <h3 class="playfair text-2xl font-bold mb-6 gold-text">Hours</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <p class="font-semibold">Mon - Thu</p>
+                            <p>11:00 - 22:00</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Fri - Sat</p>
+                            <p>11:00 - 23:00</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Sunday</p>
+                            <p>12:00 - 21:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="divider w-full h-px my-12"></div>
+            
+            <div class="text-center">
+                <p>&copy; 2023 TUTTO Italian Restaurant. All rights reserved.</p>
+                <p class="mt-2 text-sm text-gray-500">Designed with passion for authentic Italian cuisine</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body> 
+</html>
