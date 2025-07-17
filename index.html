@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TUTTO - Authentic Italian Cuisine in Wisła</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
@@ -24,7 +24,7 @@
                     <a href="#about" class="hover:text-[#c19b76] transition lang" data-pl="O nas" data-cz="O nás">O nas</a>
                     <a href="#menu" class="hover:text-[#c19b76] transition lang" data-pl="Menu" data-cz="Menu">Menu</a>
                     <a href="#gallery" class="hover:text-[#c19b76] transition lang" data-pl="Galeria" data-cz="Galerie">Galeria</a>
-                    <a href="#testimonials" class="hover:text-[#c19b76] transition lang" data-pl="Opinie" data-cz="Recenze">Opinie</a>
+                    <a href="#opinions" class="hover:text-[#c19b76] transition lang" data-pl="Opinie" data-cz="Recenze">Opinie</a>
                     <a href="#location" class="hover:text-[#c19b76] transition lang" data-pl="Znajdź nas" data-cz="Najdi nás">Znajdź nas</a>
                 </div>
         
@@ -413,245 +413,39 @@
             </div>
         </div>
     </section>
+
+ <!-- Sekcja Opini -->   
+<section id="opinions" class="py-6 px-10">
+  <div class="container mx-auto">
+    <div class="text-center mb-4">
+      <h2 class="playfair text-4xl md:text-5xl font-bold mt-9 mb-2 gold-text">Opinie</h2>
+      <div class="divider w-24 h-px mx-auto my-8"></div>
+      <p class="max-w-3xl mx-auto text-lg">Dowiedz się, co nasi zadowoleni klienci sądzą o ich doświadczeniach z Tutto!</p>
+    </div>
+  </div>
+</section>
+
+
+
     
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 px-10">
-        <div class="container mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="playfair text-4xl md:text-5xl font-bold mb-4 gold-text">What Our Guests Say</h2>
-                <div class="divider w-24 h-px mx-auto my-6"></div>
-                <p class="max-w-3xl mx-auto text-lg">Hear from our satisfied customers about their Tutto experience</p>
-            </div>
-            
-            <div class="testimonial-slider relative">
-                <!-- Left Arrow -->
-                <div class="testimonial-arrow left" id="testimonial-prev">
-                    <i class="fas fa-chevron-left text-white"></i>
-                </div>
-                
-                <!-- Right Arrow -->
-                <div class="testimonial-arrow right" id="testimonial-next">
-                    <i class="fas fa-chevron-right text-white"></i>
-                </div>
-                
-                <!-- Testimonial Slides -->
-                <div class="grid grid-row-1 md:grid-cols-3 gap-8">
-                    <!-- Slide 1 (Active) -->
-                    <div class="testimonial-slide active">
-                        <!-- Testimonial 1 -->
-                        <div class="testimonial-card p-8 rounded-lg">
-                            <div class="flex items-center mb-6">
-                                <img src="https://randomuser.me/api/portraits/women/32.jpg" 
-                                     alt="Anna K." 
-                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
-                                <div class="ml-4">
-                                    <h4 class="playfair text-xl font-bold">Anna K.</h4>
-                                    <div class="flex gold-text">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="italic mb-4">"The best Italian food I've had outside of Italy! The carbonara is absolutely divine and takes me right back to Rome."</p>
-                            <p class="text-sm text-gray-400">Visited: March 2023</p>
-                        </div>
-                        
-                        <!-- Testimonial 2 -->
-                        <div class="testimonial-card p-8 rounded-lg">
-                            <div class="flex items-center mb-6">
-                                <img src="https://randomuser.me/api/portraits/men/75.jpg" 
-                                     alt="Piotr W." 
-                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
-                                <div class="ml-4">
-                                    <h4 class="playfair text-xl font-bold">Piotr W.</h4>
-                                    <div class="flex gold-text">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="italic mb-4">"The Diavola pizza is perfectly spicy and the crust has that authentic wood-fired taste. Service was impeccable too!"</p>
-                            <p class="text-sm text-gray-400">Visited: January 2023</p>
-                        </div>
-                        
-                        <!-- Testimonial 3 -->
-                        <div class="testimonial-card p-8 rounded-lg">
-                            <div class="flex items-center mb-6">
-                                <img src="https://randomuser.me/api/portraits/women/68.jpg" 
-                                     alt="Magdalena S." 
-                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
-                                <div class="ml-4">
-                                    <h4 class="playfair text-xl font-bold">Magdalena S.</h4>
-                                    <div class="flex gold-text">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="italic mb-4">"We come here every anniversary. The romantic atmosphere combined with exquisite food makes for perfect celebrations."</p>
-                            <p class="text-sm text-gray-400">Visited: December 2022</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 2 -->
-                    <div class="testimonial-slide">
-                        <!-- Testimonial 4 -->
-                        <div class="testimonial-card p-8 rounded-lg">
-                            <div class="flex items-center mb-6">
-                                <img src="https://randomuser.me/api/portraits/men/32.jpg" 
-                                     alt="Jan K." 
-                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
-                                <div class="ml-4">
-                                    <h4 class="playfair text-xl font-bold">Jan K.</h4>
-                                    <div class="flex gold-text">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="italic mb-4">"The Italian burgers are a revelation! The combination of flavors is incredible. I can't decide which one I like more."</p>
-                            <p class="text-sm text-gray-400">Visited: November 2022</p>
-                        </div>
-                        
-                        <!-- Testimonial 5 -->
-                        <div class="testimonial-card p-8 rounded-lg">
-                            <div class="flex items-center mb-6">
-                                <img src="https://randomuser.me/api/portraits/women/45.jpg" 
-                                     alt="Katarzyna M." 
-                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
-                                <div class="ml-4">
-                                    <h4 class="playfair text-xl font-bold">Katarzyna M.</h4>
-                                    <div class="flex gold-text">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="italic mb-4">"As someone who lived in Italy for 5 years, I can say this is the most authentic Italian food in Poland. The pasta is perfect!"</p>
-                            <p class="text-sm text-gray-400">Visited: October 2022</p>
-                        </div>
-                        
-                        <!-- Testimonial 6 -->
-                        <div class="testimonial-card p-8 rounded-lg">
-                            <div class="flex items-center mb-6">
-                                <img src="https://randomuser.me/api/portraits/men/68.jpg" 
-                                     alt="Marek Z." 
-                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
-                                <div class="ml-4">
-                                    <h4 class="playfair text-xl font-bold">Marek Z.</h4>
-                                    <div class="flex gold-text">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="italic mb-4">"The wine selection is excellent and pairs perfectly with the food. The staff's recommendations are always spot on."</p>
-                            <p class="text-sm text-gray-400">Visited: September 2022</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Slide 3 -->
-                    <div class="testimonial-slide">
-                        <!-- Testimonial 7 -->
-                        <div class="testimonial-card p-8 rounded-lg">
-                            <div class="flex items-center mb-6">
-                                <img src="https://randomuser.me/api/portraits/women/22.jpg" 
-                                     alt="Agnieszka P." 
-                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
-                                <div class="ml-4">
-                                    <h4 class="playfair text-xl font-bold">Agnieszka P.</h4>
-                                    <div class="flex gold-text">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="italic mb-4">"The atmosphere is so cozy and authentic. It feels like a little piece of Italy right in the center of Wisła."</p>
-                            <p class="text-sm text-gray-400">Visited: August 2022</p>
-                        </div>
-                        
-                        <!-- Testimonial 8 -->
-                        <div class="testimonial-card p-8 rounded-lg">
-                            <div class="flex items-center mb-6">
-                                <img src="https://randomuser.me/api/portraits/men/45.jpg" 
-                                     alt="Tomasz B." 
-                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
-                                <div class="ml-4">
-                                    <h4 class="playfair text-xl font-bold">Tomasz B.</h4>
-                                    <div class="flex gold-text">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="italic mb-4">"I've tried almost everything on the menu and haven't been disappointed once. The quality is consistently excellent."</p>
-                            <p class="text-sm text-gray-400">Visited: July 2022</p>
-                        </div>
-                        
-                        <!-- Testimonial 9 -->
-                        <div class="testimonial-card p-8 rounded-lg">
-                            <div class="flex items-center mb-6">
-                                <img src="https://randomuser.me/api/portraits/women/55.jpg" 
-                                     alt="Ewa W." 
-                                     class="w-16 h-16 rounded-full border-2 border-[#c19b76]">
-                                <div class="ml-4">
-                                    <h4 class="playfair text-xl font-bold">Ewa W.</h4>
-                                    <div class="flex gold-text">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="italic mb-4">"The desserts are to die for! The tiramisu is the best I've ever had - light, creamy, and full of flavor."</p>
-                            <p class="text-sm text-gray-400">Visited: June 2022</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-52f9641e-2111-4987-a41d-042a45104628" data-elfsight-app-lazy></div>
     
     <!-- Location Section -->
     <section id="location" class="py-20 px-10 bg-[#1a1e22]">
         <div class="container mx-auto">
             <div class="text-center mb-16">
-                <h2 class="playfair text-4xl md:text-5xl font-bold mb-4 gold-text">Find Us</h2>
+                <h2 class="playfair text-4xl md:text-5xl font-bold mb-4 gold-text">Znajdź nas</h2>
                 <div class="divider w-24 h-px mx-auto my-6"></div>
-                <p class="max-w-3xl mx-auto text-lg">Visit our restaurant in the heart of Wisła's City Center</p>
+                <p class="max-w-3xl mx-auto text-lg">Odwiedź naszą restaurację w centrum Wisły</p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Map -->
                 <div class="map-container rounded-lg overflow-hidden shadow-xl h-96">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2568.123456789012!2d18.12345678901234!3d49.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDA3JzI0LjQiTiAxOMKwMDcnMjQuNCJF!5e0!3m2!1sen!2spl!4v1234567890123!5m2!1sen!2spl" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d645.7392486336873!2d18.859237747749226!3d49.65510957312408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47141971b030cee1%3A0xdd2ecd651791208a!2sTUTTO%20Pizza%20%26%20Pasta!5e0!3m2!1spl!2spl!4v1752733880918!5m2!1spl!2spl" 
                         width="100%" 
                         height="100%" 
                         style="border:0;" 
@@ -664,38 +458,32 @@
                 <!-- Contact Info -->
                 <div class="flex flex-col justify-center">
                     <div class="mb-8">
-                        <h3 class="playfair text-2xl font-bold mb-4 gold-text">Address</h3>
-                        <p class="mb-2">Rynek 15</p>
-                        <p>43-460 Wisła, Poland</p>
+                        <h3 class="playfair text-2xl font-bold mb-4 gold-text">Adres</h3>
+                        <p class="mb-2">Plac Bogumiła Hoffa 3, </p>
+                        <p>43-460 Wisła, Polska</p>
+
+</p>
                     </div>
                     
                     <div class="mb-8">
-                        <h3 class="playfair text-2xl font-bold mb-4 gold-text">Contact</h3>
-                        <p class="mb-2">Phone: +48 123 456 789</p>
-                        <p>Email: info@tutto-wisla.pl</p>
+                        <h3 class="playfair text-2xl font-bold mb-4 gold-text">Kontakt</h3>
+                        <p class="mb-2">Telefon: +48 504 707 250</p>
+                        <p>Email: restauracjatutto@gmail.com</p>
                     </div>
                     
                     <div>
-                        <h3 class="playfair text-2xl font-bold mb-4 gold-text">Hours</h3>
+                        <h3 class="playfair text-2xl font-bold mb-4 gold-text">Godziny otwarcia:</h3>
                         <div class="grid grid-cols-2 gap-4">
                             <div>
-                                <p class="font-semibold">Monday - Thursday</p>
-                                <p>11:00 - 22:00</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Friday - Saturday</p>
+                                <p class="font-semibold">Poniedziałek - Niedziela</p>
                                 <p>11:00 - 23:00</p>
-                            </div>
-                            <div>
-                                <p class="font-semibold">Sunday</p>
-                                <p>12:00 - 21:00</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="mt-8">
                         <h3 class="playfair text-2xl font-bold mb-4 gold-text">Parking</h3>
-                        <p>Paid parking available at City Center underground garage (entrance on Słoneczna street)</p>
+                        <p>Najbliższy parking aby dostać się do Tutto, znajduję się przy Starej Karczmie w Wiśle. Jest on płatny.</p>
                     </div>
                 </div>
             </div>
@@ -709,44 +497,38 @@
                 <div>
                     <h3 class="playfair text-2xl font-bold mb-6 gold-text uppercase">TUTTO</h3>
                     <p class="mb-4">Pizza Pasta Salad</p>
-                    <p class="mb-4">Bringing authentic Italian flavors to the heart of Wisła since 2015.</p>
+                    <p class="mb-4"></p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-white hover:gold-text text-xl"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-white hover:gold-text text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Tutto.Kuchnia.Wloska?locale=pl_PL" class="text-white hover:gold-text text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/pizzeriatutto/" class="text-white hover:gold-text text-xl"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 
                 <div>
-                    <h3 class="playfair text-2xl font-bold mb-6 gold-text">Contact</h3>
-                    <p class="mb-2">Rynek 15, 43-460 Wisła</p>
-                    <p class="mb-2">+48 123 456 789</p>
-                    <p>info@tutto-wisla.pl</p>
-                </div>
-                
-                <div>
-                    <h3 class="playfair text-2xl font-bold mb-6 gold-text">Hours</h3>
+                    <h3 class="playfair text-2xl font-bold mb-6 gold-text">Godziny otwarcia</h3>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
-                            <p class="font-semibold">Mon - Thu</p>
-                            <p>11:00 - 22:00</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold">Fri - Sat</p>
+                            <p class="font-semibold">Pon - Ndz</p>
                             <p>11:00 - 23:00</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold">Sunday</p>
-                            <p>12:00 - 21:00</p>
                         </div>
                     </div>
                 </div>
+
+                <div>
+                    <h3 class="playfair text-2xl font-bold mb-6 gold-text">Kontakt</h3>
+                    <p class="mb-2">Plac Bogumiła Hoffa 3, 43-460 Wisła</p>
+                    <p class="mb-2">+48 504 707 250</p>
+                    <p>restauracjatutto@gmail.com</p>
+                </div>
+                
+                
             </div>
             
             <div class="divider w-full h-px my-12"></div>
             
             <div class="text-center">
-                <p>&copy; 2023 TUTTO Italian Restaurant. All rights reserved.</p>
-                <p class="mt-2 text-sm text-gray-500">Designed with passion for authentic Italian cuisine</p>
+                <p>&copy; 2025 TUTTO. Wszelkie prawa zastrzeżone</p>
+                <p class="mt-2 text-sm text-gray-500">Zaprojektowane z pasją do autentycznej kuchni włoskiej</p>
             </div>
         </div>
     </footer>
